@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Box-Office Gross Prediction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+      
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('../static/website_image-1.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-color: rgba(7, 7, 7, 0.567); /* Semi-transparent white */
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: "Playfair Display SC", serif;
+            letter-spacing: 1px;
+            font-size: 35px;
+            color: #e1a500;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: "Syne", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 19px;
+            color: #fffbfb;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        a {
+           font-family: "Vidaloka", serif;
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: rgb(247, 248, 248);
+            background-color: #f57c00; /* Orange button */
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #ff9800; /* Slightly lighter orange on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Welcome to Movie Box-Office Gross Prediction</h1>
+        <p>
+            Predicting a movie’s box office success involves analyzing various factors. 
+            Instead of waiting for weeks to see how your film performs, we’ve simplified the process! 
+            With our machine learning model, you can estimate the box office gross of your movie. 
+            To generate an accurate prediction, we just need some key details about your project.
+        </p>
+        <a href="/predict">Predict</a>
+    </div>
+</body>
+</html>

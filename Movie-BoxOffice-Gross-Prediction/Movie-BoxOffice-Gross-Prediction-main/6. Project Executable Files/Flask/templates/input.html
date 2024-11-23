@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            width: 100vw; /* Full width of the viewport */
+            background-size: cover;
+            background-position: center;
+            background-image: url('../static/website_image-3.jpg'); /* Replace with actual image path */
+            overflow: hidden; /* Prevent scrolling */
+            position: relative;
+        }
+
+        /* Adding a semi-transparent overlay to make text more visible */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; /* Cover entire viewport */
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .container {
+            background-color: rgb(245, 241, 241); /* Slight transparency */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px; /* Maximum width of the form */
+            width: 90%; /* Responsive width */
+            max-height: 90vh; /* Ensure it fits within the viewport */
+            overflow: auto; /* Enable scrolling for container if needed */
+            z-index: 2; /* Place it above the overlay */
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            color: #dfa401; /* Light color for better contrast */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #c0b70bf4; /* Light color for better contrast */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #bdc3c7;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        input[type="submit"] {
+            background-color: #f9bb02;
+            color: #ffffff;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #fbd04f;
+        }
+
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Movie Box Office Gross Prediction</h2>
+        <h4>Enter movie details and predict success probability</h4>
+        <form action="/submit" method="POST">
+            <label for="budget">Enter Budget</label>
+            <input type="number" id="budget" min="0" name="budget" placeholder="Budget" required>
+
+            <label for="genres">Select Genre</label>
+            <select id="genres" name="genres">
+                <option value="0">Action</option>
+                <option value="1">Adventure</option>
+                <option value="2">Animation</option>
+                <option value="3">Comedy</option>
+                <option value="4">Crime</option>
+                <option value="5">Documentary</option>
+                <option value="6">Drama</option>
+                <option value="7">Family</option>
+                <option value="8">Fantasy</option>
+                <option value="9">History</option>
+                <option value="10">Horror</option>
+                <option value="11">Music</option>
+                <option value="12">Mystery</option>
+                <option value="13">Romance</option>
+                <option value="14">Science Fiction</option>
+                <option value="15">TV Movie</option>
+                <option value="16">Thriller</option>
+                <option value="17">War</option>
+                <option value="18">Western</option>
+            </select>
+
+            <label for="popularity">Enter Popularity</label>
+            <input type="number" id="popularity" min="0" name="popularity" placeholder="Popularity score" required>
+
+            <label for="runtime">Enter Runtime (minutes)</label>
+            <input type="number" id="runtime" min="0" name="runtime" placeholder="Runtime in minutes" required>
+
+            <label for="vote_average">Enter Vote Average</label>
+            <input type="number" id="vote_average" min="0" max="10" step="0.1" name="vote_average" placeholder="Average vote (0-10)" required>
+
+            <label for="vote_count">Enter Vote Count</label>
+            <input type="number" id="vote_count" min="0" name="vote_count" placeholder="Total vote count" required>
+
+            <label for="release_month">Enter Release Month</label>
+            <input type="number" id="release_month" min="1" max="12" name="release_month" placeholder="Month (1-12)" required>
+
+            <label for="release_DOW">Enter Release Week (Day of the Week)</label>
+            <input type="number" id="release_DOW" min="1" max="7" name="release_DOW" placeholder="Day (1 for Monday, etc.)" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

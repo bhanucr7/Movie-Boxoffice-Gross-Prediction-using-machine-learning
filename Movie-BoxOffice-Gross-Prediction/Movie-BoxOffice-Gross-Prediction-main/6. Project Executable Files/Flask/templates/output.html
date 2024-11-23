@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+        /* Reset margins and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set height for the entire HTML and body to 100% */
+        html, body {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Fullscreen background styling */
+        body {
+            background: url('../static/website_image-2.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size:cover;
+        }
+
+        /* Centering content with Flexbox */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(37, 37, 37, 0.445); /* Semi-transparent background */
+            padding: 50px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Title box styling */
+        .title-box {
+            color: white;
+        }
+
+        /* Styling for the title */
+        .title {
+            font-size: 2.5rem;
+            font-family:"Playfair Display SC", serif ;
+            letter-spacing: 1px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the result text */
+        .result {
+            font-size: 1.5rem;
+            font-family:"Playfair Display SC", serif ;
+            margin-top: 10px;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title-box">
+            <div class="title">Movie Box Office Gross Prediction Using ML</div>
+            <div class="result">The Revenue predicted is {{result}} million $</div>
+        </div>
+    </div>
+</body>
+</html>
